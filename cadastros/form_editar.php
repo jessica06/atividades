@@ -1,5 +1,4 @@
-<html>
-    <head>
+  <head>
             <title>Cadastro de Pessoas</title>
     </head>    
     <body>
@@ -10,10 +9,10 @@
             <label>Digite o código da pessoa para Editar:</label>
             <br/>
            <input type="text" name="id" />
-           <br/>
-            <label>Digite o novo nome da pessoa:</label>
+           <br/><br/>
+            <label>Digite o novo nome da pessoa.</label>
             <br/>
-           <input type="text" name="nome" />
+           <?php require_once ("campos_pessoa.php"); ?>
            <br/>
            <input type="submit" value="Editar" />  
         </form>    
@@ -32,7 +31,7 @@
         
         foreach($cadastros as $id => $pessoa){
             if($pessoa!= null) {
-                echo " [$id] => $pessoa <br/>";
+                echo " [$id] => " . $pessoa["nome"] .  "<br/>";
             } 
         }
         
