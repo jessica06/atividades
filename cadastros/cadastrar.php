@@ -8,10 +8,16 @@ require_once("menu.php");
     }
     
     $nome = $_REQUEST["nome"];
+    $sexo = $_REQUEST["sexo"];
     
-    array_push($_SESSION["cadastros"], $nome);
+    $pessoa = array();
+    $pessoa ["nome"] = $nome;
+    $pessoa ["sexo"] = $sexo;
+    
+    array_push($_SESSION["cadastros"], $pessoa);
 
     echo "Cadastro efetuado com sucesso!";
 
 
 ?>
+
